@@ -13,7 +13,7 @@ import java.util.Random;
 /**
  * The Zebra class extends the Animal class and implements the Herbivore and Trick interfaces.
  */
-public class Zebra extends Animal implements Herbivore, Trick {
+public class Zebra extends Animal implements Herbivore {
     public String name;
     public String helloText;
     public String eatText;
@@ -35,15 +35,4 @@ public class Zebra extends Animal implements Herbivore, Trick {
         System.out.println(eatText);
     }
 
-    @Override
-    public void performTrick() {
-        Random random = new Random();
-        int rnd = random.nextInt(2);
-        if (rnd == 0) {
-            trick = "jumps over a fence";
-        } else {
-            trick = "races around the field";
-        }
-        System.out.println(trick);
-    }
 }
